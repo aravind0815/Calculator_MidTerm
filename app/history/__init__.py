@@ -14,18 +14,18 @@ class History:
         elif not os.access(os.path.dirname(path), os.W_OK):
             logging.error(f"The directory '{os.path.dirname(path)}' is not writable.")
 
-    def write(self, data):
+    def writing_the_data(self, data):
         data_without_id = [record[1:] if len(record) == 4 else record for record in data]
         data_with_id = [[self.counter + i] + record for i, record in enumerate(data_without_id)]
         self.counter += len(data)
         cal_data = pd.DataFrame(data_with_id, columns=['ID','action', 'arg1', 'arg2'])
         cal_data.to_csv(self.path, index=False)
     
-    def read_as_list(self):
+    def get_as_list(self):
         existing_data = pd.read_csv(self.path)
         return existing_data.values.tolist()
     
-    def read_as_data_frame(self):
+    def get_as_data_frame(self):
         return pd.read_csv(self.path)
     
     def clear(self):

@@ -1,7 +1,18 @@
 from app.commands import Command
+from app.history import History
 
-class AddCommand(Command):
+class SubtractCommand(Command):
     def execute(self):
-        input1 = float(input("Enter the first number: "))
-        input2 = float(input("Enter the second number: "))
-        print(input1 - input2)
+        try:
+            hist_inst = History()
+            input1 = float(input("Enter the first number: "))
+            input2 = float(input("Enter the second number: "))
+            result = input1 - input2
+            print(result)
+            data = ['subtract', input1, input2]
+            existing_data = hist_inst.get_as_list()
+            existing_data.append(data)
+            hist_inst.writing_the_data(existing_data)
+
+        except ValueError as e:
+                print("Please enter a valid number!")

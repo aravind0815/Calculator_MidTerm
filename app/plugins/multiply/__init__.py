@@ -8,7 +8,7 @@ class MultiplyCommand(Command):
             input1 = float(input("Enter the first number: "))
             input2 = float(input("Enter the second number: "))
             result = input1 * input2
-            print(result)
+            print('The result of the operation is', result)
             data = ['multiply', input1, input2]
             existing_data = hist_inst.get_as_list()
             existing_data.append(data)

@@ -7,5 +7,5 @@ class MenuCommand(Command):
 
     def execute(self):
         menu_list = self.handler.menu_list()
-        print("Menu:", list(menu_list))
+        print("The Menu options are:", list(menu_list))
 

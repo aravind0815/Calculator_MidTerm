@@ -9,4 +9,4 @@ class ClearCommand(Command):
         hist_inst = History()
         hist_inst.clear()
         print('History has been cleared!')
-        logging.info('Calculator history has been cleared')
+        logging.info('Calculator history has been cleared!')

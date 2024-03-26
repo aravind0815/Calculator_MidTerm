@@ -1,3 +1,4 @@
+import logging
 from app.commands import Command
 from app.history import History
 
@@ -9,6 +10,8 @@ class SubtractCommand(Command):
             input2 = float(input("Enter the second number: "))
             result = input1 - input2
             print('The result of the operations is', result)
+            logging.info(f'Subtraction of {input1} and {input2} = {input1 - input2}')
+            logging.info('The Subtract operation was performed successfully')
             data = ['subtract', input1, input2]
             existing_data = hist_inst.get_as_list()
             existing_data.append(data)
@@ -16,4 +19,5 @@ class SubtractCommand(Command):
 
         except ValueError as e:
                 print("Please enter a valid number!")
+                logging.info('The Subtraction operation failed')
          

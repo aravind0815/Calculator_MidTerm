@@ -6,30 +6,23 @@ This report outlines the design and implementation of a Python module for managi
 ### Step 1: Clone the Repository
     To get started, clone the repository by executing the following command in your terminal:
 
-    ```
     git clone repository_link
-    ```
 
 ### Step 2: Install Dependencies
     Next, navigate to the cloned repository directory and install the required dependencies using the following command:
 
-    ```
     pip install -r requirements.txt
-    ```
 
 ### Step 3: Configure Environment Variables
     Create a `.env` file in the root directory and add the following key-value pair to specify the file path for the calculator history:
-    
-    ```
+
     CALC_HISTORY_FILE_PATH='./data/calculator_history.csv'
-    ```
+
 
 ### Step 4: Run the Application
     Execute the main application file `main.py` using the following command:
-    
-    ```
+
     python3 main.py
-    ```
 
 ## Examples of Usage
 Once the application is running, utilize the 'menu' command to view a list of available functionalities.

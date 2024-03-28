@@ -88,7 +88,7 @@ To retrieve all data from the CSV file, use the command:
 ```
 This command will display the complete history of calculations performed, including the action performed and the values used.
 Implementation of load [click here](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/load/__init__.py)
-    example:
+### example:
         >>> load
             Calculator history data:
                 ID   action     arg1  arg2
@@ -107,7 +107,7 @@ To remove a specific record from the history by its ID field, follow these steps
 2. Input the ID of the record you wish to delete when prompted.
 3. The system will update and display the history after the deletion.
 Implementtion of delete [click here](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/delete/__init__.py)
-    example:
+### example:
         >>> delete
             Enter the ID of the record to delete: 4
             2024-03-27 22:33:15,422 - root - INFO - History of the record with ID 4 has been deleted.

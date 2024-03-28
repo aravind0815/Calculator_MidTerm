@@ -4,25 +4,26 @@ This report outlines the design and implementation of a Python module for managi
 ## Setup Guide
 
 ### Step 1: Clone the Repository
-    To get started, clone the repository by executing the following command in your terminal:
+    #To get started, clone the repository by executing the following command in your terminal:
 
     git clone repository_link
 
 ### Step 2: Install Dependencies
-    Next, navigate to the cloned repository directory and install the required dependencies using the following command:
+    #Next, navigate to the cloned repository directory and install the required dependencies using the following command:
 
     pip install -r requirements.txt
 
 ### Step 3: Configure Environment Variables
-    Create a `.env` file in the root directory and add the following key-value pair to specify the file path for the calculator history:
+    #Create a `.env` file in the root directory and add the following key-value pair to specify the file path for the calculator history:
 
     CALC_HISTORY_FILE_PATH='./data/calculator_history.csv'
 
 
 ### Step 4: Run the Application
-    Execute the main application file `main.py` using the following command:
+    #Execute the main application file `main.py` using the following command:
 
     python3 main.py
+
 
 ## Examples of Usage
 Once the application is running, utilize the 'menu' command to view a list of available functionalities.
@@ -53,6 +54,7 @@ For detailed implementation, refer to the following links:
 - [Addition Operation](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/add/__init__.py)
 - [Subtraction Operation](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/subtract/__init__.py)
 - [Multiplication Operation](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/multiply/__init__.py)
+
 
 ## Implementation Overview
 
@@ -86,16 +88,17 @@ To retrieve all data from the CSV file, use the command:
 ```
 This command will display the complete history of calculations performed, including the action performed and the values used.
 Implementation of load [click here](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/load/__init__.py)
+    example:
+        >>> load
+            Calculator history data:
+                ID   action     arg1  arg2
+                1      add      3.0   2.0
+                2    subtract   5.0   3.0
+                3   multiply    5.0   4.0
+                4    divide     4.0   2.0
 
-#### 2. Clear History (clear)
-To delete all stored history, utilize the command:
-```
->>> clear
-```
-Executing this command will clear the entire history, providing a clean slate for new calculations.
-Implementation of clear [click here](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/clear/__init__.py)
 
-#### 3. Delete Specific Record (delete)
+#### 2. Delete Specific Record (delete)
 To remove a specific record from the history by its ID field, follow these steps:
 1. Enter the command:
 ```
@@ -104,6 +107,24 @@ To remove a specific record from the history by its ID field, follow these steps
 2. Input the ID of the record you wish to delete when prompted.
 3. The system will update and display the history after the deletion.
 Implementtion of delete [click here](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/delete/__init__.py)
+    example:
+        >>> delete
+            Enter the ID of the record to delete: 4
+            2024-03-27 22:33:15,422 - root - INFO - History of the record with ID 4 has been deleted.
+            Data history of calculator after deletion:
+            ID   action     arg1   arg2
+            1     add       3.0    2.0
+            2   subtract    5.0    3.0
+            3   multiply    5.0    4.0
+
+#### 3. Clear History (clear)
+To delete all stored history, utilize the command:
+```
+>>> clear
+```
+Executing this command will clear the entire history, providing a clean slate for new calculations.
+Implementation of clear [click here](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/clear/__init__.py)
+
 
 ### Logging Approach
 
@@ -132,6 +153,7 @@ The application implements a robust logging mechanism leveraging Python's loggin
 [Dive into the error handling strategy](https://github.com/aravind0815/Calculator_MidTerm/blob/main/app/plugins/subtract/__init__.py)
 
 By adopting this logging approach, the application ensures transparency, traceability, and resilience in its operational lifecycle, thereby fortifying its reliability and maintainability in diverse operational scenarios.
+
 
 ### EAFP (Easier to Ask for Forgiveness than Permission)
 

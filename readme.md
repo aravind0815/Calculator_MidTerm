@@ -1,6 +1,7 @@
 # Advanced Calculator Optimization: A Comprehensive Overview of Design Patterns, Logging, and Error Handling
 This report outlines the design and implementation of a Python module for managing a history of calculations within a calculator application. The system utilizes various design patterns, logging strategies, and error handling techniques to provide a robust and user-friendly experience.
 
+## Video Presentation link [click here](https://drive.google.com/drive/folders/1S3G9mdgkFb_YhuPB9KznY3zvP_e0hxxx)
 ## Setup Guide
 
 ### Step 1: Clone the Repository
